@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FYLO.LoginUI"
+             Title="Login">
+
+    <ContentPage.Content>
+        <StackLayout
+            Padding="40"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand">
+            <Label
+                Text="Welcome, Please Sign In:"
+                HorizontalOptions="Center"
+                Padding="0, 0, 0, 30"
+                FontSize="Title"/>
+            <Entry
+                x:Name="txtUsername"
+                Keyboard="Plain"
+                Placeholder="Username"
+                IsSpellCheckEnabled="False"
+                IsTextPredictionEnabled="False"
+                PlaceholderColor="Gray" 
+                BackgroundColor="Transparent"/>
+            <Entry
+                x:Name="txtPassword" 
+                Placeholder="Password" 
+                IsSpellCheckEnabled="False"
+                IsTextPredictionEnabled="False"
+                IsPassword="True" 
+                PlaceholderColor="Gray" 
+                BackgroundColor="Transparent"/>
+            <StackLayout Padding="15,30,15,0">
+                <Button
+                    VerticalOptions="Center"
+                    Text="Login"
+                    TextColor="Green"
+                    BackgroundColor="Transparent"
+                    BorderColor="Green"
+                    BorderWidth="1.5"
+                    CornerRadius="20"
+                    Clicked="Login_Button_Clicked"/>
+
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Don't have an account? " TextColor="Gray"/>
+                            <Span Text="Register" TextColor="Gray" FontAttributes="Bold" TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

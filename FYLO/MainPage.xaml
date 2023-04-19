@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="FYLO.MainPage"
+            xmlns:local="clr-namespace:FYLO">
+    <local:HomePage Title="Home"/>
+    <NavigationPage Title="Catalog">
+        <x:Arguments>
+            <local:CatalogPage Title="Catalog"/>
+        </x:Arguments>
+    </NavigationPage>
+    <local:AccountPage Title="Account"/>
+
+</TabbedPage>

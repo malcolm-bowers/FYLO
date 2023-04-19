@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FYLO.HomePage"
+    Title="Figure Your Life Out">
+    <StackLayout>
+        <StackLayout Padding="20,50,20,0" Orientation="Horizontal" HorizontalOptions="Center">
+            <Label 
+                Text="Welcome, User"
+                TextColor="Silver"
+                FontSize="36"/>
+        </StackLayout>
+        <BoxView Color="Silver" HeightRequest="1"/>
+        <StackLayout Padding="15,10,15,0">
+            <Label
+                Text="Your Base: Fort Sam Houston"/>
+            <Label
+                Text="Your Brigade: 32nd Medical Brigade"/>
+            <Label
+                Text="Your Battalion: 232d Medical Battaion"/>
+            <Label
+                Text="Please select an option:"
+                Padding="0, 25, 0, 0"/>
+        </StackLayout>
+        <!--This displays the button-->
+        <Button
+            Clicked="Button_Clicked"
+            Text="Do PDF Things"/>
+    </StackLayout>
+</ContentPage>
+
