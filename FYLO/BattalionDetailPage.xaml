@@ -13,6 +13,10 @@
                 Orientation="Horizontal">
                 <Label
                     Text="{Binding Location}" />
+                <Label
+                    Text="{Binding Base}" />
+                <Label
+                    Text="{Binding Brigade}" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

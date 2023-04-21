@@ -14,7 +14,7 @@ namespace FYLO
         {
            _battalions = new ObservableCollection<Battalion>
             {
-                new Battalion { Id = 1, Name = "232d Medical Battalion", Location = "Texas" },
+                new Battalion { Id = 1, Name = "232d Medical Battalion", Location = "Texas"},
                 new Battalion { Id = 2, Name = "27th Engineer Battalion", Location = "North Carolina" }
             };
 
