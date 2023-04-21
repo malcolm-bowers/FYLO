@@ -27,18 +27,12 @@ namespace FYLO
         {
             InitializeComponent();
 
-            baseListView.ItemsSource = GetBases();
+            ListView.ItemsSource = GetBases();
         }
-        private void baseListView_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            var bs = e.Item as Base;
-            DisplayAlert("Tapped", bs.Name, "OK");
-        }
-
-        private void baseListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var bs = e.SelectedItem as Base;
-            DisplayAlert("Selection", bs.Name, "OK");
+            Navigation.PushAsync(new BaseDetailPage(bs));
         }
         private void Delete_Clicked(object sender, System.EventArgs e)
         {
@@ -46,16 +40,16 @@ namespace FYLO
             _bases.Remove(bs);
         }
 
-        private void baseListView_Refreshing(object sender, EventArgs e)
+        private void ListView_Refreshing(object sender, EventArgs e)
         {
-            baseListView.ItemsSource = GetBases();
+            ListView.ItemsSource = GetBases();
 
-            baseListView.EndRefresh();
+            ListView.EndRefresh();
         }
 
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            baseListView.ItemsSource = GetBases(e.NewTextValue);
+            ListView.ItemsSource = GetBases(e.NewTextValue);
         }
     }
 }

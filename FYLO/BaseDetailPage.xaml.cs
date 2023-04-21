@@ -1,12 +1,20 @@
-﻿using Xamarin.Forms;
+﻿using FYLO.Models;
+using Xamarin.Forms;
+
+using System;
 
 namespace FYLO
 {
     public partial class BaseDetailPage : ContentPage
     {
-        public BaseDetailPage()
+        public BaseDetailPage(Base bs)
         {
-            InitializeComponent();
+            if (bs == null)
+                throw new ArgumentNullException();
+
+            BindingContext = bs;
+
+            InitializeComponent(); 
         }
     }
 }
