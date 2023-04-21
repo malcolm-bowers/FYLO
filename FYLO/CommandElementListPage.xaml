@@ -2,10 +2,10 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="FYLO.CommandListPage">
+    x:Class="FYLO.CommandElementListPage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="commandListView">
+            <ListView x:Name="commandElementListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding Name}" Detail="{Binding Location}" />

@@ -5,10 +5,20 @@
     x:Class="FYLO.BaseListPage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="baseListView">
+            <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged"/>
+            <ListView 
+                x:Name="baseListView"
+                ItemTapped="baseListView_ItemTapped"
+                ItemSelected="baseListView_ItemSelected"
+                IsPullToRefreshEnabled="True"
+                Refreshing="baseListView_Refreshing">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Name}" Detail="{Binding Location}" />
+                        <TextCell Text="{Binding Name}" Detail="{Binding Location}">
+                            <TextCell.ContextActions>
+                                <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}"/>
+                            </TextCell.ContextActions>
+                        </TextCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

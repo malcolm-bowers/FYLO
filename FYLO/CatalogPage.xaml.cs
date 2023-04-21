@@ -26,7 +26,7 @@ namespace FYLO
 
         async private void Command_Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new CommandListPage());
+            await Navigation.PushAsync(new CommandElementListPage());
         }
     }
 }
