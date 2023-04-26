@@ -1,22 +1,39 @@
 ﻿using FYLO.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using Xamarin.Forms;
 
 namespace FYLO
 {
     public partial class BaseListPage : ContentPage
     {
+        public const string Url = "http://192.168.1.158:8000/api/base/?format=json";
+        public HttpClient _client = new HttpClient();
+
         private ObservableCollection<Base> _bases;
+
+        protected override async void OnAppearing()
+        {
+            var content = await _client.GetStringAsync(Url);
+            var bases = JsonConvert.DeserializeObject<List<Base>>(content);
+
+            _bases = new ObservableCollection<Base>(bases);
+
+            ListView.ItemsSource = GetBases();
+
+            base.OnAppearing();
+        }
         IEnumerable<Base> GetBases(string searchText = null)
         {
-            _bases = new ObservableCollection<Base>
-            {
-                new Base { Id = 1, Name = "Fort Bragg", Location = "North Carolina" },
-                new Base { Id = 2, Name = "Fort Benning", Location = "Georgia" }
-            };
+            //_bases = new ObservableCollection<Base>
+            //{
+            //    new Base { Id = 1, Name = "Fort Bragg", Location = "North Carolina" },
+            //    new Base { Id = 2, Name = "Fort Benning", Location = "Georgia" }
+            //};
 
             if (String.IsNullOrWhiteSpace(searchText))
                 return _bases;
@@ -26,8 +43,6 @@ namespace FYLO
         public BaseListPage()
         {
             InitializeComponent();
-
-            ListView.ItemsSource = GetBases();
         }
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
