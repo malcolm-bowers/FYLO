@@ -13,15 +13,7 @@
                 Refreshing="ListView_Refreshing">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Name}" Detail="{Binding Location}">
-                            <TextCell.ContextActions>
-                                <MenuItem 
-                                    Text="Delete"
-                                    Clicked="Delete_Clicked" 
-                                    IsDestructive="True" 
-                                    CommandParameter="{Binding .}"/>
-                            </TextCell.ContextActions>
-                        </TextCell>
+                        <TextCell Text="{Binding Name}" Detail="{Binding Location}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
