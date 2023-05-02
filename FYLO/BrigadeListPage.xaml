@@ -8,7 +8,7 @@
             <ListView x:Name="brigadeListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Name}" Detail="{Binding Location}" />
+                        <TextCell Text="{Binding name}" Detail="{Binding location}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

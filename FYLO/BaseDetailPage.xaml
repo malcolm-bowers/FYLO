@@ -3,16 +3,16 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="FYLO.BaseDetailPage"
-    Padding="20" Title="{Binding Name}" >
+    Padding="20" Title="{Binding name}" >
     <ContentPage.Content>
         <StackLayout>
             <Label 
-                Text="{Binding Name}" 
+                Text="{Binding name}" 
                 FontSize="Title"/>
             <StackLayout 
                 Orientation="Horizontal">
                 <Label
-                    Text="{Binding Location}" />
+                    Text="{Binding location}" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

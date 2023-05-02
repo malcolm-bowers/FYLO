@@ -2,9 +2,9 @@
 {
     public class Brigade
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Location { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string location { get; set; }
         public CommandElement CommandElement { get; set; }
         public Base Base { get; set; }
     }

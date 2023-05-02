@@ -13,8 +13,8 @@ namespace FYLO
 
             commandElementListView.ItemsSource = new List<Command>
             {
-                new Command { Id = 1, Name = "FORSCOM" },
-                new Command { Id = 2, Name = "TRADOC" }
+                new Command { id = 1, name = "FORSCOM" },
+                new Command { id = 2, name = "TRADOC" }
             };
         }
     }

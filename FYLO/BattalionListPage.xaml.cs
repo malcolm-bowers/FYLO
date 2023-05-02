@@ -14,14 +14,14 @@ namespace FYLO
         {
            _battalions = new ObservableCollection<Battalion>
             {
-                new Battalion { Id = 1, Name = "232d Medical Battalion", Location = "Texas"},
-                new Battalion { Id = 2, Name = "27th Engineer Battalion", Location = "North Carolina" }
+                new Battalion { id = 1, name = "232d Medical Battalion", location = "Texas"},
+                new Battalion { id = 2, name = "27th Engineer Battalion", location = "North Carolina" }
             };
 
             if (String.IsNullOrWhiteSpace(searchText))
                 return _battalions;
 
-            return _battalions.Where(c => c.Name.StartsWith(searchText));
+            return _battalions.Where(c => c.name.StartsWith(searchText));
         }
         public BattalionListPage()
         {

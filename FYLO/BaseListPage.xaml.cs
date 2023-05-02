@@ -28,7 +28,7 @@ namespace FYLO
             if (String.IsNullOrWhiteSpace(searchText))
                 return _bases;
 
-            return _bases.Where(c => c.Name.StartsWith(searchText));
+            return _bases.Where(c => c.name.StartsWith(searchText));
         }
         public BaseListPage()
         {

@@ -14,13 +14,13 @@ namespace FYLO
             brigadeListView.ItemsSource = new List<Brigade>
             {
                 new Brigade {
-                    Id = 1,
-                    Name = "32nd Medical Brigade",
-                    Location = "Texas"},
+                    id = 1,
+                    name = "32nd Medical Brigade",
+                    location = "Texas"},
                 new Brigade {
-                    Id = 2,
-                    Name = "20th Engineer Brigade",
-                    Location = "North Carolina"}
+                    id = 2,
+                    name = "20th Engineer Brigade",
+                    location = "North Carolina"}
             };
         }
     }

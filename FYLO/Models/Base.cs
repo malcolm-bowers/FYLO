@@ -1,10 +1,13 @@
-﻿namespace FYLO.Models
+﻿using System;
+
+namespace FYLO.Models
 {
     public class Base
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Location { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string location { get; set; }
+        public File File { get; set; }
     }
 }
 
