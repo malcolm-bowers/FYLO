@@ -2,10 +2,63 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="FYLO.AccountPage">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="This is the account page."/>
-
+    x:Class="FYLO.AccountPage"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    ios:Page.UseSafeArea="true">
+    <StackLayout>
+        <Label Text="User"
+               HorizontalOptions="Center"
+               FontSize="36"/>
+        <BoxView Color="Silver" HeightRequest="1"/>
+        <StackLayout Padding="12">
+            <StackLayout 
+                Orientation="Horizontal">
+                <Label Text="Base:" 
+                       FontSize="Title"/>
+                <Picker x:Name="basePicker"
+                        Title="Select a base..."
+                        HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout 
+                Orientation="Horizontal">
+                <Label Text="Command:" 
+                       FontSize="Title"/>
+                <Picker x:Name="commandPicker"
+                        Title="Select a command..."
+                        HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout 
+                Orientation="Horizontal">
+                <Label Text="Brigade:" 
+                       FontSize="Title"/>
+                <Picker x:Name="brigadePicker"
+                        Title="Select a brigade..."
+                        HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout 
+                Orientation="Horizontal">
+                <Label Text="Battalion:" 
+                       FontSize="Title"/>
+                <Picker x:Name="battalionPicker"
+                        Title="Select a battalion..."
+                        HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout 
+                Orientation="Horizontal">
+                <Label Text="Company:" 
+                       FontSize="Title"/>
+                <Picker x:Name="companyPicker"
+                        Title="Select a company..."
+                        HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout
+            VerticalOptions="EndAndExpand"
+            HorizontalOptions="CenterAndExpand"
+            Padding="10">
+            <Button Text="Update" 
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
 

@@ -3,22 +3,37 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="FYLO.HomePage"
-    Title="Figure Your Life Out">
+    Title="Figure Your Life Out"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    ios:Page.UseSafeArea="true">
     <StackLayout>
-        <StackLayout Padding="20,50,20,0" Orientation="Horizontal" HorizontalOptions="Center">
+        <StackLayout Padding="10" Orientation="Horizontal">
             <Label 
-                Text="Welcome, User"
+                Text="Welcome, "
                 TextColor="Silver"
-                FontSize="36"/>
+                FontSize="Title"/>
+            <Label
+                Text="User"
+                TextColor="Silver"
+                FontSize="Title"/>
         </StackLayout>
         <BoxView Color="Silver" HeightRequest="1"/>
-        <StackLayout Padding="15,10,15,0">
+        <StackLayout Padding="15">
             <Label
-                Text="Your Base: Fort Sam Houston"/>
+                Text="Your Base: Fort Sam Houston"
+                FontSize="Default"/>
             <Label
-                Text="Your Brigade: 32nd Medical Brigade"/>
+                Text="Your Command: TRADOC"
+                FontSize="Default"/>
             <Label
-                Text="Your Battalion: 232d Medical Battaion"/>
+                Text="Your Brigade: 32nd Medical Brigade"
+                FontSize="Default"/>
+            <Label
+                Text="Your Battalion: 232d Medical Battaion"
+                FontSize="Default"/>
+            <Label
+                Text="Your Company: Alpha Company"
+                FontSize="Default"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>
