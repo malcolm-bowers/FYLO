@@ -14,17 +14,20 @@ namespace FYLO
     {
         private ObservableCollection<Base> _bases;
 
-        protected override async void OnAppearing()
+        protected async void apiCall()
         {
             RestService rs = new RestService();
             _bases = await rs.GetAPIBases();
-
+        }
+        protected override void OnAppearing()
+        {
             ListView.ItemsSource = GetBases();
 
             base.OnAppearing();
         }
         IEnumerable<Base> GetBases(string searchText = null)
         {
+            apiCall();
             if (String.IsNullOrWhiteSpace(searchText))
                 return _bases;
 
@@ -32,6 +35,7 @@ namespace FYLO
         }
         public BaseListPage()
         {
+            apiCall();
             InitializeComponent();
         }
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

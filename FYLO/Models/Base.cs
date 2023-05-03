@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FYLO.Models
 {
@@ -7,7 +8,7 @@ namespace FYLO.Models
         public int id { get; set; }
         public string name { get; set; }
         public string location { get; set; }
-        public File File { get; set; }
+        public List<File> files { get; set; }
     }
 }
 

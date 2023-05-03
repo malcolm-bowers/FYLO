@@ -9,10 +9,17 @@
             <Label 
                 Text="{Binding name}" 
                 FontSize="Title"/>
-            <StackLayout 
-                Orientation="Horizontal">
+            <StackLayout>
                 <Label
                     Text="{Binding location}" />
+                <ListView x:Name="FilesView"
+                          ItemSelected="FilesView_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding name}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

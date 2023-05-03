@@ -27,7 +27,5 @@ namespace FYLO.Resources
 
             return _bases;
         }
-
-
     }
 }

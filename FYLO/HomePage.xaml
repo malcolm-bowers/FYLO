@@ -19,14 +19,7 @@
                 Text="Your Brigade: 32nd Medical Brigade"/>
             <Label
                 Text="Your Battalion: 232d Medical Battaion"/>
-            <Label
-                Text="Please select an option:"
-                Padding="0, 25, 0, 0"/>
         </StackLayout>
-        <!--This displays the button-->
-        <Button
-            Clicked="Button_Clicked"
-            Text="Do PDF Things"/>
     </StackLayout>
 </ContentPage>
 
